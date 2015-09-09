@@ -1,4 +1,4 @@
-git init
+
 git hub create
 git add .
 git commit -m 'create new repo'
