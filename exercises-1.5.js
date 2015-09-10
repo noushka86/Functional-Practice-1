@@ -20,9 +20,10 @@ console.assert(total === 24)
 // that takes an array and a function
 // ----------------------------
 
-function reduce(array, callback, tot){
-   if (tot == undefined) tot = 1 
-   forEach(array,function(a){
+function reduce(array, callback){
+   var tot=array[0];
+   newArray=array.slice(1);
+   forEach(newArray,function(a){
     tot=callback(a,tot);
    })
 return tot;
@@ -40,6 +41,7 @@ console.assert(
 // ----------------------------
 
 function map(array, callback){
+    
     var newArray=[];
 
     forEach(array,function(a){
@@ -67,7 +69,7 @@ function filter(array, callback){
   
   var newArray=[];
 var isEven;
-  reduce(array,function(a){
+  forEach(array,function(a){
     isEven=callback(a);
     if(isEven)
     {
@@ -99,7 +101,7 @@ function sum(){
       return a+v;
     })
 
-  return s-args[0];
+  return s;
 }
 
 // // tests

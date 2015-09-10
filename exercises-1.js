@@ -66,7 +66,7 @@ console.assert(squares[3] === 16)
 function filter(array, callback){
   
   var newArray=[];
-var isEven;
+  var isEven;
   reduce(array,function(a){
     isEven=callback(a);
     if(isEven)
